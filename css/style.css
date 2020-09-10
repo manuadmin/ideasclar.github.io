@@ -4,6 +4,26 @@ p {font-size:18px; color:#272727; line-height:26px;}
 ul {list-style: none;}
 a:hover {text-decoration:none;}
 
+/******* animations *********/
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.05);
+  }
+  100% {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
 /* Header CSS */
 .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
@@ -63,11 +83,18 @@ nav ul li{
 	top:99%;
 }
 
+.sticky .header_top {
+	display:none;
+}
+
 .header_cont {
 	box-shadow:0 3px 6px #00000029;
-	z-index: 1;
-    position: relative;
+	/*z-index: 1;
+    position: relative;*/
+    background-color:#ffffff;
 }
+
+.banner_cont {padding-top:144px;}
 
 .banner_cont h1 {
 	font-size: 40px;
@@ -465,11 +492,6 @@ section .why_work_cont {
 	font-weight:600;
 }
 
-.mid_item {
-	border-left:1px dashed #e4e4e4;
-	border-right:1px dashed #e4e4e4;
-}
-
 .cate_cont h4 {
 	font-size:18px;
 	color:#1A2752;
@@ -682,15 +704,55 @@ section .why_work_cont {
     height: 80%;
 }
 
+header .dropdown-menu {
+	min-width:200px;
+}
+
+.verticals_cont img{
+	transition:0.5s;
+}
+
+.verticals_cont .item:hover img{
+	margin-top:-8px;
+	display:inline-block;
+}
+
+.ecosystem_image{
+	z-index:1;
+}
+
+.ecosystem_image:after {
+    animation: shadow-pulse 2s infinite;
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0;
+    display: inline-block;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    top: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+}
+
+.cate_cont_inner img {
+	-webkit-animation: rotation 5s infinite linear;
+}
+
 /* ====== Responsive CSS ===== */
 @media (min-width:1024px) and (max-width:1199px)
 {
 	.navbar-light .navbar-nav .nav-link {font-size:13px;}
+	header .container {padding:0;}
 }
 
 @media (max-width:1023px)
 {
 	figure img, .geospread_cont img, .invest_cont img {width:100%;}
+	.banner_cont {padding-top:0px;}
+	.fixed-top {position:relative;}
 }
 
 @media (min-width:768px) and (max-width:1023px)
@@ -700,17 +762,15 @@ section .why_work_cont {
 	.navbar-light .navbar-nav .nav-link {font-size:11px; padding:21px 0;}
 	.banner_cont h1 {font-size:20px;}
 	nav ul li {padding:0 7px;}
+	header .container {padding:0;}
 }
 
 @media (max-width:767px)
 {
 	.invest_cont .flex-row-reverse {flex-direction:normal !important;}
 	.invest_cont .d-flex img {margin-bottom:20px;}
-
 	.what_we_do_cont h2 {padding-top:25px;}
-
 	.header_top {display:none;}
-
 	.banner_cont img {height:200px;}
 	.banner_cont h1 {font-size:24px;}
 	header .navbar-nav .dropdown-menu {display:none !important;}

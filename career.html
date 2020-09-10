@@ -19,7 +19,7 @@
   <body>
     <!--header section begins-->
     <header>
-      <div class="header_cont">
+      <div class="header_cont fixed-top">
         <div class="header_top">
           <div class="container d-flex flex-wrap justify-content-center">
             <aside class="col-md-6">
@@ -45,7 +45,7 @@
                 <ul class="navbar-nav w-100 justify-content-end">
                     <li class="nav-item dropdown">
                          <a class="nav-link d-sm-block d-md-none" href="index.html">COMPANY</a>
-                        <a class="nav-link dropdown-toggle d-none d-md-block" href="index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">COMPANY</a>
+                        <a class="nav-link dropdown-toggle d-none d-md-block" href="index.html" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">COMPANY</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="index.html#about">About Company</a></li>
                             <li><a class="dropdown-item" href="index.html#who_we_are">Who We Are</a></li>
@@ -57,11 +57,24 @@
                             
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="focus.html">FOCUS AND APPROACH</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-sm-block d-md-none" href="focus.html">FOCUS AND APPROACH</a>
+                        <a class="nav-link dropdown-toggle d-none d-md-block" href="focus.html" id="navbarDropdownMenuLink1" aria-haspopup="true" aria-expanded="false">FOCUS AND APPROACH</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="focus.html#verticals">Verticals</a></li>
+                            <li><a class="dropdown-item" href="focus.html#ecosystem">Ecosystem</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">PORTFOLIO</a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-sm-block d-md-none" href="portfolio.html">PORTFOLIO</a>
+                        <a class="nav-link dropdown-toggle d-none d-md-block" href="portfolio.html" id="navbarDropdownMenuLink2" aria-haspopup="true" aria-expanded="false">PORTFOLIO</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item" href="portfolio.html#commerce">Digital Commerce</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html#consulting">Consulting</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html#insights">Digital Insights</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html#fintech">Fintech</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="events.html">NEWS AND EVENTS</a>
@@ -248,6 +261,17 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+         $(window).scroll(function() {    // this will work when your window scrolled.
+          var height = $(window).scrollTop();  //getting the scrolling height of window
+          if(height  > 100) {
+            $("header").addClass("sticky");
+          } else{
+            $("header").removeClass("sticky");
+          }
+         });
+         
+      </script>
 
   </body>
 </html>

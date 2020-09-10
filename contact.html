@@ -19,15 +19,10 @@
   <body>
     <!--header section begins-->
     <header>
-      <div class="header_cont">
+      <div class="header_cont fixed-top">
         <div class="header_top">
           <div class="container d-flex flex-wrap justify-content-center">
-            <aside class="col-md-6">
-              <span><img src="images/header-mail.png" class="pr-2 header_mail"/> info@example.com</span> &nbsp; <span class="divider">|</span>
-              <span><img src="images/header-contact.png" class="pr-2"/> +91 9876543201</span>
-            </aside>
-
-            <aside class="col-md-6 text-right">
+            <aside class="col-md-12 text-right">
               <a href="#" class="ml-2"><img src="images/header-facebook.png"/></a>
               <a href="#" class="ml-2"><img src="images/header-twitter.png"/></a>
               <a href="#" class="ml-2"><img src="images/header-linkedin.png"/></a>
@@ -45,7 +40,7 @@
                 <ul class="navbar-nav w-100 justify-content-end">
                     <li class="nav-item dropdown">
                          <a class="nav-link d-sm-block d-md-none" href="index.html">COMPANY</a>
-                        <a class="nav-link dropdown-toggle d-none d-md-block" href="index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">COMPANY</a>
+                        <a class="nav-link dropdown-toggle d-none d-md-block" href="index.html" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">COMPANY</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="index.html#about">About Company</a></li>
                             <li><a class="dropdown-item" href="index.html#who_we_are">Who We Are</a></li>
@@ -57,11 +52,24 @@
                             
                         </ul>                    
                       </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="focus.html">FOCUS AND APPROACH</a>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link d-sm-block d-md-none" href="focus.html">FOCUS AND APPROACH</a>
+                        <a class="nav-link dropdown-toggle d-none d-md-block" href="focus.html" id="navbarDropdownMenuLink1" aria-haspopup="true" aria-expanded="false">FOCUS AND APPROACH</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="focus.html#verticals">Verticals</a></li>
+                            <li><a class="dropdown-item" href="focus.html#ecosystem">Ecosystem</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">PORTFOLIO</a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-sm-block d-md-none" href="portfolio.html">PORTFOLIO</a>
+                        <a class="nav-link dropdown-toggle d-none d-md-block" href="portfolio.html" id="navbarDropdownMenuLink2" aria-haspopup="true" aria-expanded="false">PORTFOLIO</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item" href="portfolio.html#commerce">Digital Commerce</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html#consulting">Consulting</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html#insights">Digital Insights</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html#fintech">Fintech</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="events.html">NEWS AND EVENTS</a>
@@ -142,7 +150,7 @@
         <div class="container pb-5">
           <div class="d-flex flex-wrap">
             <div class="col-md-3 mt-5">
-              <div>
+              <div class="pb-1">
                 <img src="images/contact-location-icon.png" alt="location icon"/>
                 <h4>US</h4>
                 <p>
@@ -152,7 +160,7 @@
                 <h6>Ph: 321 445 9499</h6>
               </div>
 
-              <div class="pt-5">
+              <div class="pt-5 mt-4">
                 <img src="images/contact-location-icon.png" alt="location icon"/>
                 <h4>Canada</h4>
                 <p>
@@ -163,43 +171,45 @@
               </div>
             </div>
 
-            <div class="col-md-6 mid_item mt-5">
+            <div class="col-md-9 mid_item mt-5">
+              <div>
               <img src="images/contact-location-icon.png" alt="location icon"/>
               <h4>India</h4>
               <div class="d-flex flex-wrap">
-                <div class="col-md-6 pl-0">
+                <div class="col-md-4 pl-0">
                   <p>
                     Bengaluru: <br> 4th Floor, 1665/A . 14th Main, 7th Sector HSR Layout Bangalore 560035
                   </p>
                   <span>ab@method-hub.com</span>
                   <h6>Ph: +91 9916 9916 27</h6>
-
-                  <div class="pt-5 mt-4">
-                    <p>
-                     Chennai: <br> 3rd Floor , New # 76, 1st Main Road, CIT Nagar Chennai 600035
-                    </p>
-                    <span>kumar@method-hub.com</span>
-                    <h6>Ph: +91 9176 6787 71</h6>
-                  </div>
                 </div>
 
-                <div class="col-md-6 pr-0">
+                <div class="col-md-4">
                   <p>
                     Chandigarh: <br> 5th Floor, E 314, Sector 75, <br> SAS Nagar Punjab 160055
                   </p>
                   <span>gurpreet@method-hub.com</span>
                   <h6>Ph: +91 8727 8007 36</h6>
                 </div>
+
+                 <div class="col-md-4">
+                    <p>
+                     Chennai: <br> 3rd Floor , New # 76, 1st Main Road, CIT Nagar Chennai 600035
+                    </p>
+                    <span>kumar@method-hub.com</span>
+                    <h6>Ph: +91 9176 6787 71</h6>
+                  </div>
               </div>
             </div>
 
-            <div class="col-md-3 mt-5">
+             <div class="pt-5 col-md-4">
               <img src="images/contact-location-icon.png" alt="location icon"/>
               <h4>Thailand</h4>
               <p>
                 Chartered Square <br> 152 N Sathon Road. Khwaeng Silom, Khet Bang Rak, Krung Thep Maha Nakhon 10500
               </p>
               <span>dinesh@nemera.com</span>
+            </div>
             </div>
           </div>
         </div>
@@ -298,6 +308,17 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+         $(window).scroll(function() {    // this will work when your window scrolled.
+          var height = $(window).scrollTop();  //getting the scrolling height of window
+          if(height  > 100) {
+            $("header").addClass("sticky");
+          } else{
+            $("header").removeClass("sticky");
+          }
+         });
+         
+      </script>
 
   </body>
 </html>

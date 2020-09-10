@@ -19,15 +19,10 @@
   <body>
     <!--header section begins-->
     <header>
-      <div class="header_cont">
+      <div class="header_cont fixed-top">
         <div class="header_top">
           <div class="container d-flex flex-wrap justify-content-center">
-            <aside class="col-md-6">
-              <span><img src="images/header-mail.png" class="pr-2 header_mail"/> info@example.com</span> &nbsp; <span class="divider">|</span>
-              <span><img src="images/header-contact.png" class="pr-2"/> +91 9876543201</span>
-            </aside>
-
-            <aside class="col-md-6 text-right">
+            <aside class="col-md-12 text-right">
               <a href="#" class="ml-2"><img src="images/header-facebook.png"/></a>
               <a href="#" class="ml-2"><img src="images/header-twitter.png"/></a>
               <a href="#" class="ml-2"><img src="images/header-linkedin.png"/></a>
@@ -45,7 +40,7 @@
                 <ul class="navbar-nav w-100 justify-content-end">
                     <li class="nav-item dropdown">
                          <a class="nav-link d-sm-block d-md-none" href="index.html">COMPANY</a>
-                        <a class="nav-link dropdown-toggle d-none d-md-block" href="index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">COMPANY</a>
+                        <a class="nav-link dropdown-toggle d-none d-md-block" href="index.html" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">COMPANY</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="index.html#about">About Company</a></li>
                             <li><a class="dropdown-item" href="index.html#who_we_are">Who We Are</a></li>
@@ -56,11 +51,24 @@
                             <li><a class="dropdown-item" href="index.html#geospread">Geospread</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="focus.html">FOCUS AND APPROACH</a>
+                     <li class="nav-item dropdown active">
+                        <a class="nav-link d-sm-block d-md-none" href="focus.html">FOCUS AND APPROACH</a>
+                        <a class="nav-link dropdown-toggle d-none d-md-block" href="focus.html" id="navbarDropdownMenuLink1" aria-haspopup="true" aria-expanded="false">FOCUS AND APPROACH</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="#verticals">Verticals</a></li>
+                            <li><a class="dropdown-item" href="#ecosystem">Ecosystem</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">PORTFOLIO</a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-sm-block d-md-none" href="portfolio.html">PORTFOLIO</a>
+                        <a class="nav-link dropdown-toggle d-none d-md-block" href="portfolio.html" id="navbarDropdownMenuLink2"  aria-haspopup="true" aria-expanded="false">PORTFOLIO</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item" href="portfolio.html#commerce">Digital Commerce</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html#consulting">Consulting</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html#insights">Digital Insights</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html#fintech">Fintech</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="events.html">NEWS AND EVENTS</a>
@@ -115,7 +123,7 @@
     <!-- focus Section Ends-->
 
     <!--Verticals section begins-->
-    <section>
+    <section id="verticals">
       <div class="verticals_cont bg_grey py-5">
         <div class="container">
           <div class="main_head position-relative text-center mb-4">
@@ -173,7 +181,7 @@
     <!--Verticals section ends-->
 
     <!-- ecosystem Section Begins-->
-    <section>
+    <section id="ecosystem">
       <div class="ecosystem_cont py-5">
         <div class="container pt-4">
           <div class="d-flex flex-wrap">
@@ -199,7 +207,7 @@
           </div>
 
           <div class="text-center pt-5">
-            <figure>
+            <figure class="ecosystem_image position-relative">
               <img src="images/invested-entity.png"/>
             </figure>
 
@@ -263,13 +271,18 @@
                 <h2>Customer Ecosystem</h2>
               </div>
 
-              <ul class="p-0">
-                <li>Geo reach </li>
-                <li>Sector Outreach </li>
-                <li>Common Customers </li>
-                <li>LeadGen </li>
-                <li>Community Access </li>
-              </ul>
+              <div class="d-flex flex-wrap">
+                <ul class="p-0 col-md-7">
+                  <li>Geo reach </li>
+                  <li>Sector Outreach </li>
+                  <li>Common Customers </li>
+                </ul>
+
+                <ul class="p-0 col-md-5">
+                  <li>LeadGen </li>
+                  <li>Community Access </li>
+                </ul>
+              </div>
             </aside>
 
             <aside class="col-md-5 text-center">
@@ -413,6 +426,17 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+         $(window).scroll(function() {    // this will work when your window scrolled.
+          var height = $(window).scrollTop();  //getting the scrolling height of window
+          if(height  > 100) {
+            $("header").addClass("sticky");
+          } else{
+            $("header").removeClass("sticky");
+          }
+         });
+         
+      </script>
 
   </body>
 </html>
