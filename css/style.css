@@ -379,7 +379,7 @@ nav .dropdown-menu {
 
 .news_cont .item {
 	border:1px solid #ebebeb;
-	max-height: 346px;
+	max-height: 368px;
     height: 100%;
 }
 
@@ -785,6 +785,7 @@ header .dropdown-menu {
 	.eco_cont aside {padding-top:0 !important;}
 	.main_head h2 {font-size:30px;}
 	.management_cont  ul li {max-width:33% !important; flex: 0 0 33%;}
+	.news_cont .item {}
 }
 
 @media (max-width:767px)
@@ -811,4 +812,5 @@ header .dropdown-menu {
 	.banner_cont.port_banner h1 {font-size:30px; top:15%;}
 	.port_contact {padding-top:60px;}
 	.ecosystem_image:after {display:none;}
+	.news_cont .item {max-height:100%;}
 }
